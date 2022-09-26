@@ -308,6 +308,9 @@ body {
    *:focus {
       outline: none;
    }
+   .header {
+      padding-bottom: 150px;
+   }
    .nav {
       column-gap: 80px;
       /* justify-content: center;  */
@@ -390,7 +393,6 @@ body {
    background: #5D62B5;
    border-radius: 40px;
    padding: 104px 87px 0px 87px;
-
    position: relative;
 }
 .who-we-are__container::after {
@@ -445,12 +447,21 @@ body {
    margin-bottom: -124px; /*картинка вылезет за контейнер родителя вниз*/
 }
 
+
+@media (max-width:767.99px) {
+   .who-we-are__container {
+      padding: 50px 15px 0px 15px;
+   }
+   .who-we-are__container::after {
+      display: none;
+   }
+}
 /* ====================== promise ========================================== */
  
 
 
 .promise {
-   padding: 110px 0 122px 0;
+   padding: 110px 15px 122px 15px;
 }
 
 .promise__subtitle {
@@ -492,6 +503,17 @@ body {
 }
 
 
+@media (max-width:767.99px) {
+   .promise__container {
+      padding: 50px 15px 50px 15px;
+   }
+   .promise-columns {
+      flex-wrap: wrap;
+   }
+   .promise-column {
+      flex: 1 0 100%;
+   }
+}
 
 /*========================== PUP ====================================*/
 
@@ -504,7 +526,7 @@ body {
 
 
 .pup__image {
-   flex: 1 1 50%;
+   flex: 1 0 50%;
    padding: 44px 0 0 0;
    background: url(../images/pup/decor-blob.png) 0 0 / 50% no-repeat, url(../images/pup/decor-circles.png) 0px 66% / 27.5% no-repeat;
 }
@@ -516,21 +538,40 @@ body {
 .pup__content {
    flex: 1 0 50%;
    padding: 112px 0px 0px 99px;
-
 }
 
 .pup__title {
    max-width: 411px;
    margin-bottom: 42px;
 }
-.title_white {
+
+@media (max-width:1030px) {
+   .pup__content {
+      padding: 50px 0px 50px 50px;
+
+   }
 }
-.pup__button {
-
+@media (max-width:767.99px) {
+   .pup__title {
+      font-size: 26px;
+   }
+   .pup__content {
+      padding: 30px 0px 50px 30px;
+   }
 }
-
-
-
+@media (max-width:600px) {
+   .pup__image {
+       flex: 1 0 100%;
+   }
+   .pup__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .pup__title {
+      font-size: 26px;
+   }
+}
 /*=================== SERVICES =====================*/
 
 
