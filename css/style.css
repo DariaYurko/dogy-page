@@ -179,7 +179,6 @@ body {
    column-gap: 31px;
 } */
 .header-info__item {
-
 }
 .item-info {
    display: flex;
@@ -218,11 +217,14 @@ body {
    background-color: #ffffff;
    border-radius: 10px;
    display: flex;
+   /* flex-wrap: wrap; */
+   gap: 37px;
    justify-content: space-between;
    margin: 0 0 126px 0;
 }
 .nav-menu {
    display: flex;
+   /* flex-wrap: wrap; */
    column-gap: 37px;
 }
 .nav-menu__item {
@@ -279,6 +281,88 @@ body {
 }
 .header-introduction__button {
    box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+}
+
+
+
+@media (max-width: 850px) {
+   .header-info {
+      gap: 20px 0;
+   }
+   .header-info__item {
+      flex: 1 0 50%;
+   }
+   .header-info__logo {
+      order: 1;
+   }
+   .header-info__item_second {
+      order: 4;
+ 
+   }
+   .header-info__item_third {
+      order: 3;
+    
+   }
+   .header-info__button {
+      order: 2;
+   } 
+}
+
+@media (max-width:767.99px) {
+   .nav {
+      column-gap: 80px;
+      /* justify-content: center;  */
+      margin-bottom: 80px;
+   }
+   .nav-menu {
+      column-gap: 0px;
+      flex-wrap: wrap;
+      margin-bottom: -30px;
+   }
+   .nav-menu__item {
+      flex: 0 0 50%;
+      margin-bottom: 30px;
+   }
+
+   .nav__seach-basket {
+      align-self: center;
+   }
+   .header-introduction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .header-introduction__title {
+
+   }
+}
+
+@media (max-width: 471px) {
+   .header-info {
+      align-items: center;
+      margin-bottom: 50px;
+   }
+  .header-info__item {
+      flex: 0 0 100%;
+   } 
+   .item-info {
+      display: none;
+   }
+   .header-info__button,
+   .header-info__logo {
+      display: flex;
+      justify-content: center;
+   }
+
+   .nav {
+      margin-bottom: 50px;
+   }
+   .nav-menu__item {
+      flex: 0 0 100%;
+   }
+   .header-introduction__title {
+      font-size: 36px;
+   }
 }
 
 
@@ -374,9 +458,7 @@ body {
 
    display: flex;
    column-gap: 23px;
-
 }
-
 
 .promise-column__image {
    
@@ -807,24 +889,3 @@ body {
    flex: 0 0 auto;
 }
 
-@media (max-width: 830px) {
-   .header-info {
-      gap: 20px 0;
-   }
-   .header-info__item {
-      flex: 0 0 50%;
-   }
-   .header-info__logo {
-      order: 1;
-   }
-   .header-info__item_second {
-      order: 4;
-   }
-   .header-info__item_third {
-      order: 3;
-   }
-   .header-info__button {
-      order: 2;
-   }
-  
-}
