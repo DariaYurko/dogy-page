@@ -3,7 +3,6 @@
 &display=swap
 &display=swap&subset=cyrillic-ext    -  если нужна кирилца
  */
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap");
 
 /* Обнуление */
@@ -57,19 +56,20 @@ body {
 }
 
 [class*="__container"] {
-   max-width: 1020px;
+   max-width: 1050px;
    margin: 0 auto;
+   padding: 0 15px;
 }
 
-[class*="_pulled-top"]:not(:first-child) {/*для блоков натянутыми отрицательным отступов вверх*/
+[class*="_pulled-top"] {/*для блоков натянутыми отрицательным отступов вверх*/
    position: relative;
    z-index: 100;
    margin-top: -80px;
-
-
 }
 
-
+*:focus {
+   outline: 1px solid black;
+}
 
 /*=============================================*/
 
@@ -101,7 +101,6 @@ body {
    color: #FFFFFF;
    background: url(../images/impact/icons/main.svg) 0 -2px no-repeat;
 }
-
 .title {
    font-weight: 900;
    font-size: 36px;
@@ -123,6 +122,13 @@ body {
    letter-spacing: 0.15px;
    color: #4B4B4B;
 }
+.item-link {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 22px;
+   letter-spacing: 0.15px;
+   color: #000000;
+}
 .button {
    font-weight: 700;
    font-size: 12px;
@@ -133,7 +139,148 @@ body {
    border-radius: 7px;
    background-color: #F2726F;
    padding: 12px 34px;
+   cursor: pointer;
+   transition: 0.3s ease 0s;
 }
+.button:hover,
+.services__link:hover {
+   box-shadow: 0px 8px 16px rgba(247, 247, 247, 0.24), 0px 16px 24px rgba(249, 246, 246, 0.2);
+}
+
+
+/*========================== ========================================*/
+
+
+.header {
+   background: url(../images/header/background.jpg) 0 0/cover no-repeat;
+   padding: 26px 0 228px 0;
+}
+.header__container {
+}
+.header-info {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 31px;
+   margin: 0 0 28px 0;
+}
+
+.header-info__logo {
+   flex: 1 0 auto;
+}
+.logo {
+   transition: 0.3s ease;
+}
+.logo:hover {
+   transform: scale(1.1);
+}
+/* .header-info__info {
+   display: flex;
+   column-gap: 31px;
+} */
+.header-info__item {
+
+}
+.item-info {
+   display: flex;
+   align-items: flex-start;
+   column-gap: 10px;
+}
+.item-info__image-box {
+   flex: 0 0 24px;
+   height: 24px;
+}
+.item-info__img {
+   width: 100%;
+   height: 100%;
+  
+}
+.item-info__body {
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 22px;
+   letter-spacing: 0.15px;
+   color: #FFFFFF;
+}
+.item-info__title {
+   text-transform: uppercase;
+}
+.item-info__text {
+}
+.header-info__button {
+   align-self: flex-start;
+   flex: 0 0 auto;
+}
+
+
+.nav {
+   padding: 18px 40px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 0 126px 0;
+}
+.nav-menu {
+   display: flex;
+   column-gap: 37px;
+}
+.nav-menu__item {
+   transition: 0.3s ease;
+}
+.item-link {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 22px;
+   letter-spacing: 0.15px;
+   color: #000000;
+}
+.nav-menu__item:hover {
+   transform: scale(1.2);
+}
+.nav__seach-basket {
+   display: flex;
+   column-gap: 22px;
+}
+.search {
+}
+.search__img {
+}
+.basket {
+   position: relative;
+}
+.basket::after {
+}
+.basket__img {
+   object-fit: cover;
+}
+.basket::after {
+   content: "";
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   background: #F2726F;
+   border-radius: 50%;
+
+   position: absolute;
+   top: -6px;
+   right: -8px;
+}
+
+.header-introduction {
+}
+.header-introduction__title {
+   font-weight: 900;
+   font-size: 56px;
+   line-height: 56px;
+   color: #FFFFFF;
+   max-width: 583px;
+   margin: 0 0 48px 0;
+}
+.header-introduction__button {
+   box-shadow: 0px 8px 16px rgba(38, 38, 38, 0.24), 0px 16px 24px rgba(38, 38, 38, 0.2);
+}
+
 
 /* ===================== WHO-WE-ARE =============================== */
 
@@ -658,4 +805,26 @@ body {
 }
 .info-block__button {
    flex: 0 0 auto;
+}
+
+@media (max-width: 830px) {
+   .header-info {
+      gap: 20px 0;
+   }
+   .header-info__item {
+      flex: 0 0 50%;
+   }
+   .header-info__logo {
+      order: 1;
+   }
+   .header-info__item_second {
+      order: 4;
+   }
+   .header-info__item_third {
+      order: 3;
+   }
+   .header-info__button {
+      order: 2;
+   }
+  
 }
