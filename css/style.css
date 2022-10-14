@@ -335,7 +335,8 @@ body {
       align-items: center;
    }
    .header-introduction__title {
-
+      text-align: center;
+      font-size: 50px;
    }
 }
 
